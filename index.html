@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vercel Test</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #0f172a;
+      color: #e2e8f0;
+      padding: 1.5rem;
+    }
+
+    .card {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 2rem;
+      max-width: 480px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    h1 {
+      font-size: 1.75rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      color: #94a3b8;
+      line-height: 1.6;
+      margin-bottom: 1.5rem;
+    }
+
+    button {
+      background: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      padding: 0.75rem 1.25rem;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s ease;
+    }
+
+    button:hover {
+      background: #2563eb;
+    }
+
+    #output {
+      margin-top: 1.25rem;
+      font-size: 0.95rem;
+      color: #cbd5e1;
+      min-height: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <h1>🚀 Deployed on Vercel</h1>
+    <p>This is a simple static page. If you can see this, your Vercel deployment worked.</p>
+    <button id="btn">Click me</button>
+    <div id="output"></div>
+  </main>
+
+  <script>
+    const btn = document.getElementById("btn");
+    const output = document.getElementById("output");
+
+    btn.addEventListener("click", () => {
+      const now = new Date().toLocaleString();
+      output.textContent = `Button clicked at ${now}`;
+    });
+  </script>
+</body>
+</html>
